@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>ぺんしるくん</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="えんぴつが転がして運命を決めるぺんしるくん！">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="apple-touch-icon" href="./icons/icon-192.png">
+    <link rel="icon" href="./favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./icons/icon-192.png">
+</head>
+    <body>
+        <main>
+            <section>
+                <div id="custom-splash">
+                    <img src="./icons/icon_512.png" alt="Pencil-kun" fetchpriority="high">
+                </div>
+            </section>
+            <section>
+                <div id="title">
+                    <h1 style="cursor: pointer; user-select: none;" translate="no">
+                        <span onclick="changePencilColor('#2ecc71')" style="color:#2ecc71;">ぺ</span>
+                        <span onclick="changePencilColor('#f15646')" style="color:#f15646;">ん</span>
+                        <span onclick="changePencilColor('#f1c40f')" style="color:#f1c40f;">し</span>
+                        <span onclick="changePencilColor('#75c7fe')" style="color:#75c7fe;">る</span>
+                        <span onclick="changePencilColor('#e67e22')" style="color:#e67e22;">く</span>
+                        <span onclick="changePencilColor('#eb65a6')" style="color:#eb65a6;">ん</span>
+                    </h1>
+                </div>
+            </section>
+            <section>
+                <div id="step-guide">STEP 1: まずは選択肢を決めよう！</div>
+                <div id="step-1" class="input-section">
+                    <p id="wizard-label">1つめの選択肢 (1/6)</p>
+                    <input type="text" id="wizard-input" placeholder="選択肢を入力してね">
+                    <div id="next-area">
+                        <button id="next-btn">追加</button>
+                    </div>
+                    <div id="option-area">
+                        <label><input type="checkbox" id="retry-option"> 余った面を「もう一回」にする</label>
+                    </div>
+                    <div id="input-history">
+                        <strong>選択肢（×で削除）</strong>
+                        <ul id="history-list"></ul>
+                    </div>
+                    <div id="complete-area">
+                        <button id="complete-btn">決定</button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div id="pencil-container">
+                    <div id="effect" class="effect-container">
+                        <div class="focus-lines"></div>
+                    </div>
+                    <div id="pencil-wrapper" style="transform-style: preserve-3d;">
+                        <div id="pencil" class="pencil">
+                            <div class="pencil-head-container">
+                                <div class="pencil-head v1"></div> 
+                                <div class="pencil-head v2"></div> 
+                                <div class="pencil-head v3"></div> 
+                                <div class="pencil-head v4"></div> 
+                                <div class="pencil-head v5"></div> 
+                                <div class="pencil-head v6"></div> 
+                            </div>
+                                
+                            <div class="face f1"></div>
+                            <div class="face f2"></div>
+                            <div class="face f3"></div>
+                            <div class="face f4"></div>
+                            <div class="face f5"></div>
+                            <div class="face f6"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="emergency-area">
+                    <button id="spin-btn">スマホを振らずに転がす</button>
+                </div>
+            </section>
+            <section>
+                <div id="result-overlay">
+                    <div>
+                        <p id="result-title">🔥 ぺんしるくんの導き 🔥</p>
+                        <h1 id="result-text-display"></h1>
+                        <button id="close-btn">
+                            もう一回転がす
+                        </button>
+                        <br>
+                        <button id="reset-btn">
+                            作り直す
+                    </button>
+                    </div>
+                </div>
+                <div id="cutin-container">
+                    <div class="cutin-banner">
+                        <span>激アツ！</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="./js/app.min.js"></script>
+    </body>
+</html>
