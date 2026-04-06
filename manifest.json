@@ -15,7 +15,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "./index.html?utm_source=pwa&utm_medium=app",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f5c91a",
